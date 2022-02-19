@@ -1,0 +1,20 @@
+/*
+Theme Name: WP-Starter-Theme
+Theme URI: http://rpj-dev.com/projects/wp-starter-theme/
+Author: Rhys P. Judd 
+Author URI: http://rpj-dev.com/
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+// Global
+@import 'global/_global';
+@import 'global/_reset';
+@import 'global/_palette';
+@import 'global/_fonts';
+
+// Components
+@import 'components/_btn';
+@import 'components/_nav';
+@import 'components/_form';

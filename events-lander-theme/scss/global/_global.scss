@@ -1,0 +1,25 @@
+// Global Padding
+$padding-1: calc(1 * 1em);
+$padding-2: calc(2 * 1em);  
+$padding-4: calc(4 * 1em);
+
+body {
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    padding: $padding-2;
+
+    @media only screen and(min-device-width: 768px) {
+        padding: $padding-4;
+    }
+}
+
+section {
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+}
