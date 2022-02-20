@@ -11,10 +11,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 // Global
 @import 'global/_global';
 @import 'global/_reset';
-@import 'global/_palette';
 @import 'global/_fonts';
 
 // Components
 @import 'components/_btn';
 @import 'components/_nav';
-@import 'components/_form';
+@import 'components/_header';
+@import 'components/_cards';

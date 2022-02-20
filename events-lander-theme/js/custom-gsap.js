@@ -1,27 +1,39 @@
     
     // Custom gsap
-
-    // Section fadein
-    gsap.from("h1", {
-        duration: 0.8, 
-        x: 100, 
+    // Elements Staggering
+    
+    gsap.from("button", {
+        duration: 1, 
+        y: -200, 
         opacity: 0, 
-        scale: 0.5
+        scale: 0.7
+    });
+    gsap.from(".info", {
+        duration: 0.8, 
+        y: 100, 
+        opacity: 0, 
+        scale: 0.3
+    });
+    gsap.from("h1", {
+        duration: 0.9, 
+        y: 200, 
+        opacity: 0, 
+        scale: 0.6
     });
     gsap.from("h3", {
-        duration: 0.8, 
-        x: 100, 
+        duration: 1.0, 
+        x: -1000, 
         opacity: 0, 
         scale: 0.5
     });
-    gsap.from(".header-sub", {
-        duration: 0.8, 
+    gsap.from(".sub-header", {
+        duration: 1.2, 
         x: 100, 
         opacity: 0, 
         scale: 0.5
     });
     gsap.from("p", {
-        duration: 0.8, 
+        duration: 1.4, 
         x: 100, 
         opacity: 0, 
         scale: 0.5

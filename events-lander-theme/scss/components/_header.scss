@@ -1,0 +1,32 @@
+header {
+    margin-top: 20vh;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+
+        background: rgba(60, 109, 103, 0.9);
+        color: #fff;
+        max-width: 60%;
+        padding: 4%;
+    }
+
+    .sub-header {
+        max-width: 80%;
+        background: rgba(255, 255, 255, 0.9);
+        color: #3C6D67;
+        padding: 4%;
+        font-size: 0.9em;
+        margin-top: 20px;
+    }
+
+    .content:nth-child(2) {
+        /* margin-top: -6%; */
+        padding: 6%;
+        background: #3C6D67;
+        color: #fff;
+        grid-row: 1;
+    }
+}

@@ -6,19 +6,73 @@ $color-link: #FFF;
 $button-height: 27px;
 $button-width: 35px;
 
+/***********************
+** Top navbar
+Search / Learn / Donate
+************************/
+
+.top-nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-shadow: $box-shadow;
+  height: 10vh;
+
+  padding: $padding-1;
+
+  .menu-primary-menu-container {
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    align-items: center;
+
+        ul#menu-primary-menu {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          text-align: center;
+          li a {
+            font-size: 12px;
+          }
+        }
+    }
+}
+
+/***********************
+** Real deal navbar 
+************************/
 
 .navbar {
-    position: relative;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    box-shadow: $box-shadow;
+    .logo {
+
+        h2 {
+          text-align: left;
+          font-size: 14px;
+          margin: 7px 18px;
+          aside {
+            font-size: 22px;
+            color: #967F74;
+        }
+      }
+    }
 
     .button-container {
-        position: absolute;
-        top: 5%;
-        right: 0;
-        height: $button-height;
-        width: $button-width;
-        cursor: pointer;
-        z-index: 100;
-        transition: opacity .25s ease;
+      position: absolute;
+      top: 31%;
+      right: 5%;
+      height: 27px;
+      width: 35px;
+      cursor: pointer;
+      z-index: 100;
+      -webkit-transition: opacity .25s ease;
+      transition: opacity .25s ease;
         
         &:hover {
           opacity: .7;
@@ -66,7 +120,7 @@ $button-width: 35px;
 
 a {
     display: inline-block;
-    position: relative;
+    //position: relative;
     text-align: center;
     color: $color-main;
     text-decoration: none;
@@ -181,3 +235,8 @@ a {
     left: 0;
   }
 }
+
+
+// Override
+
+#menu-menu-1 { padding-left: unset; }

@@ -1,13 +1,12 @@
 <div class="top-nav">
-    <div class="search"><?php wp_nav_menu( array( 'theme_location' => 'primary_menu' ) );?></div>
+    <?php wp_nav_menu( array( 'theme_location' => 'primary_menu' ) );?>
 </div>
-
 
 <!-- Hamburger Nav -->
 <div class="navbar">
     <a class="logo">
-        <img src="" alt="">
-        <h2>Good Tree<br/>Foundation</h2>
+        <!-- <i class="fa-solid fa-tree"></i> -->
+        <h2>Good Tree<br/><aside>Foundation</aside></h2>
     </a>
     <div class="button-container" id="toggle">
         <span class="top"></span>

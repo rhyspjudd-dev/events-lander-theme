@@ -3,16 +3,19 @@ $padding-1: calc(1 * 1em);
 $padding-2: calc(2 * 1em);  
 $padding-4: calc(4 * 1em);
 
+$box-shadow: 0 10px 10px -5px #d3d3d3;
+
 body {
     width: 100vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1280px;
+    margin: auto;
 }
 
 main {
-    padding: $padding-2;
 
     @media only screen and(min-device-width: 768px) {
-        padding: $padding-4;
+
     }
 }
 
@@ -20,6 +23,61 @@ section {
     width: 100%;
 }
 
+p {
+    font-size: 0.9em !important;
+}
+
 a {
     cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+section.info {
+
+    .grid {
+        display: grid;
+        grid-template-rows: 1fr;
+
+        .content:nth-child(2) {
+            padding: 12% 6%;
+            background: #3C6D67;
+            color: #fff;
+            grid-row: 1;
+        }
+
+    }
+
+    button {
+        margin-top: 20px;
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+    }
+
+}
+
+section.help {
+    background: #d3d3d3;
+    padding: 5%;
+    text-align: center;
+    .box {
+        width: 100%;
+        background: #fff;
+        padding: 4%;
+        margin: 4% 0;
+            select#nature-select {
+                border: none;
+                outline: none;
+            }
+    }
+}
+
+section.cards {
+    background: #967F74;
+    color: #fff;
+    text-align: center;
+    padding: 5%;
 }

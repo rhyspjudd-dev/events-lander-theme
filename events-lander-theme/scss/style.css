@@ -7,51 +7,161 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
 body {
   width: 100vw;
-  font-family: 'Roboto', sans-serif;
-}
-
-main {
-  padding: calc(2 * 1em);
-}
-
-@media only screen and (min-device-width: 768px) {
-  main {
-    padding: calc(4 * 1em);
-  }
+  font-family: 'Montserrat', sans-serif;
+  max-width: 1280px;
+  margin: auto;
 }
 
 section {
   width: 100%;
 }
 
+p {
+  font-size: 0.9em !important;
+}
+
 a {
   cursor: pointer;
 }
 
-* {
+img {
+  max-width: 100%;
+}
+
+section.info .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+section.info .grid .content:nth-child(2) {
+  padding: 12% 6%;
+  background: #3C6D67;
+  color: #fff;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+section.info button {
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+section.help {
+  background: #d3d3d3;
+  padding: 5%;
+  text-align: center;
+}
+
+section.help .box {
+  width: 100%;
+  background: #fff;
+  padding: 4%;
+  margin: 4% 0;
+}
+
+section.help .box select#nature-select {
+  border: none;
+  outline: none;
+}
+
+section.cards {
+  background: #967F74;
+  color: #fff;
+  text-align: center;
+  padding: 5%;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-html {
-  padding: 0;
-  width: 0;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
 
 ul {
-  padding: 0;
+  padding-left: 0 !important;
 }
 
-ul li {
+li {
   list-style-type: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 h1 {
@@ -68,14 +178,91 @@ p {
   font-size: 1em;
 }
 
+button {
+  background: #fff;
+  border: none;
+  outline: none;
+  padding: 2% 4%;
+  border-radius: 20px;
+  color: #6A5F5D;
+  font-weight: 700;
+  font-size: 12px;
+  margin: auto;
+  scroll-behavior: smooth;
+}
+
+.btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8% 0;
+}
+
+/***********************
+** Top navbar
+Search / Learn / Donate
+************************/
+.top-nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-box-shadow: 0 10px 10px -5px #d3d3d3;
+          box-shadow: 0 10px 10px -5px #d3d3d3;
+  height: 10vh;
+  padding: calc(1 * 1em);
+}
+
+.top-nav .menu-primary-menu-container {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-nav .menu-primary-menu-container ul#menu-primary-menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+.top-nav .menu-primary-menu-container ul#menu-primary-menu li a {
+  font-size: 12px;
+}
+
+/***********************
+** Real deal navbar 
+************************/
 .navbar {
-  position: relative;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  -webkit-box-shadow: 0 10px 10px -5px #d3d3d3;
+          box-shadow: 0 10px 10px -5px #d3d3d3;
+}
+
+.navbar .logo h2 {
+  text-align: left;
+  font-size: 14px;
+  margin: 7px 18px;
+}
+
+.navbar .logo h2 aside {
+  font-size: 22px;
+  color: #967F74;
 }
 
 .navbar .button-container {
   position: absolute;
-  top: 5%;
-  right: 0;
+  top: 31%;
+  right: 5%;
   height: 27px;
   width: 35px;
   cursor: pointer;
@@ -128,7 +315,6 @@ p {
 
 a {
   display: inline-block;
-  position: relative;
   text-align: center;
   color: #000;
   text-decoration: none;
@@ -271,5 +457,69 @@ a:hover:after, a:focus:after, a:active:after {
     opacity: 1;
     left: 0;
   }
+}
+
+#menu-menu-1 {
+  padding-left: unset;
+}
+
+header {
+  margin-top: 20vh;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  background: rgba(60, 109, 103, 0.9);
+  color: #fff;
+  max-width: 60%;
+  padding: 4%;
+}
+
+header .sub-header {
+  max-width: 80%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #3C6D67;
+  padding: 4%;
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+header .content:nth-child(2) {
+  /* margin-top: -6%; */
+  padding: 6%;
+  background: #3C6D67;
+  color: #fff;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+li.card {
+  background: #fff;
+  color: #000;
+  margin: 4% 0;
+  padding: 6%;
+}
+
+li.card h4 {
+  line-height: 3em;
+  font-size: 1.8em;
+}
+
+li.card p {
+  line-height: 3em;
+}
+
+li.card button {
+  border: 2px solid #957F74;
+  margin: 20px auto;
 }
 /*# sourceMappingURL=style.css.map */
