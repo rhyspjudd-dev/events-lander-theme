@@ -24,15 +24,14 @@ get_header(); ?>
     <section class="info">
         <div class="grid">
             <div class="content">
-            <?php if( get_field('information_image') ): ?>
-                <img src="<?php the_field('information_image'); ?>" />
-            <?php endif; ?>
+                <?php if( get_field('information_image') ): ?>
+                    <img src="<?php the_field('information_image'); ?>" />
+                <?php endif; ?>
             </div>
             <div class="content">
-            
-            <h3><?php the_field('information_header'); ?></h3>
-            <p><?php the_field('information_sub_header'); ?></p>
-            <button><?php the_field('info_button_text'); ?></button>
+                <h3><?php the_field('information_header'); ?></h3>
+                <p><?php the_field('information_sub_header'); ?></p>
+                <button><?php the_field('info_button_text'); ?></button>
             </div>
         </div>
     </section>

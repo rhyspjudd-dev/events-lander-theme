@@ -1,3 +1,4 @@
+
 header {
     margin-top: 20vh;
     height: 70vh;
@@ -5,12 +6,24 @@ header {
     justify-content: center;
     align-items: center;
 
+    @media only screen and(min-width: 900px) {
+        padding-left: 6vw;
+        justify-content: unset;
+    }
+
     h1 {
 
         background: rgba(60, 109, 103, 0.9);
         color: #fff;
         max-width: 60%;
         padding: 4%;
+
+        @media only screen and(min-width: 900px) {
+            max-width: 55%;
+            padding: 2%;
+            margin-top: 30px;
+        }
+
     }
 
     .sub-header {
@@ -20,6 +33,11 @@ header {
         padding: 4%;
         font-size: 0.9em;
         margin-top: 20px;
+
+        @media only screen and(min-width: 900px) {
+            max-width: 40%;
+            padding: 2%;
+        }
     }
 
     .content:nth-child(2) {
@@ -28,5 +46,19 @@ header {
         background: #3C6D67;
         color: #fff;
         grid-row: 1;
+    }
+
+    @media only screen and(min-width: 900px) {
+        .btn-wrapper {
+            margin: 2% 0;
+            button {
+                margin: unset;
+                width: 175px;
+                transition: 0.25s;
+                &:hover {
+                    width: 200px;
+                }
+            }
+        }
     }
 }

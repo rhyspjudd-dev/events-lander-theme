@@ -14,6 +14,9 @@
     <!-- font-awesome 5.13.0 -->
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '/vendor/css/fontawesome.min.css' ?>"/>
 
+    <!-- jquery-3.5.0.min.js -->
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(). '/vendor/js/jquery-3.5.0.min.js' ?>"></script>
+
     <title><?php wp_title(''); ?></title>
     
 </head>

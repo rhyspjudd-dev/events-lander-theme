@@ -1,11 +1,3 @@
-$color-background: #F5F5F5;
-$color-main: #000;
-$color-active: #FFF;
-$color-link: #FFF;
-
-$button-height: 27px;
-$button-width: 35px;
-
 /***********************
 ** Top navbar
 Search / Learn / Donate
@@ -18,6 +10,8 @@ Search / Learn / Donate
   width: 100%;
   box-shadow: $box-shadow;
   height: 10vh;
+
+  display: none !important;
 
   padding: $padding-1;
 
@@ -56,6 +50,9 @@ Search / Learn / Donate
           text-align: left;
           font-size: 14px;
           margin: 7px 18px;
+          @media only screen and (min-width: 900px) {
+              margin: 12px 6vw;
+          }
           aside {
             font-size: 22px;
             color: #967F74;

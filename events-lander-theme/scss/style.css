@@ -10,17 +10,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
 body {
   width: 100vw;
-  font-family: 'Montserrat', sans-serif;
-  max-width: 1280px;
+  font-family: 'Montserrat', sans-serif !important;
   margin: auto;
 }
 
 section {
   width: 100%;
-}
-
-p {
-  font-size: 0.9em !important;
 }
 
 a {
@@ -29,53 +24,6 @@ a {
 
 img {
   max-width: 100%;
-}
-
-section.info .grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-}
-
-section.info .grid .content:nth-child(2) {
-  padding: 12% 6%;
-  background: #3C6D67;
-  color: #fff;
-  -ms-grid-row: 1;
-  grid-row: 1;
-}
-
-section.info button {
-  margin-top: 20px;
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-section.help {
-  background: #d3d3d3;
-  padding: 5%;
-  text-align: center;
-}
-
-section.help .box {
-  width: 100%;
-  background: #fff;
-  padding: 4%;
-  margin: 4% 0;
-}
-
-section.help .box select#nature-select {
-  border: none;
-  outline: none;
-}
-
-section.cards {
-  background: #967F74;
-  color: #fff;
-  text-align: center;
-  padding: 5%;
 }
 
 /* Box sizing rules */
@@ -175,7 +123,112 @@ h3 {
 }
 
 p {
-  font-size: 1em;
+  font-size: 0.9em !important;
+}
+
+section.info .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+@media only screen and (min-width: 900px) {
+  section.info .grid {
+    -ms-grid-rows: unset;
+        grid-template-rows: unset;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+section.info .grid .content:nth-child(2) {
+  padding: 12% 6%;
+  background: #3C6D67;
+  color: #fff;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+@media only screen and (min-width: 900px) {
+  section.info .grid .content:nth-child(2) {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    grid-row: unset;
+  }
+}
+
+section.info .grid .content:nth-child(1) {
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+@media only screen and (min-width: 900px) {
+  section.info .grid .content:nth-child(1) {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    grid-row: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+section.info button {
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+section.help {
+  background: #d3d3d3;
+  padding: 5%;
+  text-align: center;
+}
+
+section.help .box {
+  width: 100%;
+  background: #fff;
+  padding: 4%;
+  margin: 4% 0;
+}
+
+section.help .box select#nature-select {
+  border: none;
+  outline: none;
+}
+
+section.help .box button {
+  border: 2px solid #957F74;
+  color: #957F74;
+}
+
+section.cards {
+  background: #967F74;
+  color: #fff;
+  text-align: center;
+  padding: 5%;
+}
+
+section.dtp {
+  background: #3C6D67;
+  color: #fff;
+  min-height: 400px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.dtp .content {
+  font-size: 32px;
 }
 
 button {
@@ -189,6 +242,17 @@ button {
   font-size: 12px;
   margin: auto;
   scroll-behavior: smooth;
+}
+
+button:hover {
+  -webkit-box-shadow: 0 10px 10px -5px #d3d3d3;
+          box-shadow: 0 10px 10px -5px #d3d3d3;
+}
+
+@media only screen and (min-width: 900px) {
+  button {
+    padding: 1.25% 4%;
+  }
 }
 
 .btn-wrapper {
@@ -210,6 +274,7 @@ Search / Learn / Donate
   -webkit-box-shadow: 0 10px 10px -5px #d3d3d3;
           box-shadow: 0 10px 10px -5px #d3d3d3;
   height: 10vh;
+  display: none !important;
   padding: calc(1 * 1em);
 }
 
@@ -252,6 +317,12 @@ Search / Learn / Donate
   text-align: left;
   font-size: 14px;
   margin: 7px 18px;
+}
+
+@media only screen and (min-width: 900px) {
+  .navbar .logo h2 {
+    margin: 12px 6vw;
+  }
 }
 
 .navbar .logo h2 aside {
@@ -477,11 +548,28 @@ header {
           align-items: center;
 }
 
+@media only screen and (min-width: 900px) {
+  header {
+    padding-left: 6vw;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+}
+
 header h1 {
   background: rgba(60, 109, 103, 0.9);
   color: #fff;
   max-width: 60%;
   padding: 4%;
+}
+
+@media only screen and (min-width: 900px) {
+  header h1 {
+    max-width: 55%;
+    padding: 2%;
+    margin-top: 30px;
+  }
 }
 
 header .sub-header {
@@ -493,6 +581,13 @@ header .sub-header {
   margin-top: 20px;
 }
 
+@media only screen and (min-width: 900px) {
+  header .sub-header {
+    max-width: 40%;
+    padding: 2%;
+  }
+}
+
 header .content:nth-child(2) {
   /* margin-top: -6%; */
   padding: 6%;
@@ -500,6 +595,21 @@ header .content:nth-child(2) {
   color: #fff;
   -ms-grid-row: 1;
   grid-row: 1;
+}
+
+@media only screen and (min-width: 900px) {
+  header .btn-wrapper {
+    margin: 2% 0;
+  }
+  header .btn-wrapper button {
+    margin: unset;
+    width: 175px;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+  }
+  header .btn-wrapper button:hover {
+    width: 200px;
+  }
 }
 
 li.card {
@@ -521,5 +631,18 @@ li.card p {
 li.card button {
   border: 2px solid #957F74;
   margin: 20px auto;
+}
+
+@media only screen and (min-width: 900px) {
+  ul.cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2%;
+  }
+  li.card p {
+    line-height: 1.4em;
+  }
 }
 /*# sourceMappingURL=style.css.map */

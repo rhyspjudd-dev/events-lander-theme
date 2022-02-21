@@ -17,3 +17,16 @@ li.card {
         margin: 20px auto;
     }
 }
+
+@media only screen and(min-width: 900px) {
+    ul.cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2%;
+    }
+
+    li.card p {
+        line-height: 1.4em;
+    }
+
+}

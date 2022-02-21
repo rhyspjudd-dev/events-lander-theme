@@ -9,6 +9,14 @@ button {
     font-size: 12px;
     margin: auto;
     scroll-behavior: smooth;
+
+    &:hover {
+        box-shadow: 0 10px 10px -5px #d3d3d3;
+    }
+
+    @media only screen and(min-width: 900px) {
+        padding: 1.25% 4%;
+    }
 }
 
 .btn-wrapper {
